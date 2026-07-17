@@ -39,12 +39,13 @@
 | **编程模式** | **GPIO.BOARD**（物理引脚编号，非 BCM 编号） |
 
 > ⚠️ **重要：必须使用 BOARD 模式（物理引脚号）**，不要使用 BCM 模式。本仓库所有代码均遵循此约定。
+> 为了在不同版本的树莓派硬件上都能正常工作，强烈建议使用BOARD模式。
 
 ---
 
 ## 2. 树莓派引脚速查
 
-以下为 40Pin 树莓派 GPIO 引脚图（参考 [pinout.xyz](https://pinout.xyz/)）：
+以下为 40Pin 树莓派 GPIO 引脚图（参考官方网站 [pinout.xyz](https://pinout.xyz/)）：
 
 ```
 左侧（奇数引脚）                          右侧（偶数引脚）
@@ -433,9 +434,9 @@ Color(red, green, blue)  # 内部实现: (red << 16) | (green << 8) | blue
 
 配置文件：[.vscode/sftp.json](.vscode/sftp.json)
 
-> ⚠️ **安全提醒**：本配置文件已加入 `.gitignore`，不会上传到 GitHub。但密码以明文存储在本地磁盘中，建议改用 SSH 密钥认证。
 
-#### 方案 A：密码认证（简单，不推荐）
+
+#### 方案 A：密码认证（简单，不推荐，不过我用的就是这个，自用比较省事。。。）
 
 ```json
 {
