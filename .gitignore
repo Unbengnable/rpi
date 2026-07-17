@@ -15,13 +15,48 @@ __pycache__/
 .DS_Store
 Thumbs.db
 Desktop.ini
+# 编译生成的二进制与中间文件
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.out
+build/
+bin/
 
-# ======================== PDF / 大文件 ========================
-# PDF 教材文件体积过大（3.8MB），不上传 GitHub，本地保留即可
-Pithon_billingual.pdf
+
 
 # ======================== 临时 / 提取脚本 ========================
 _pdf_extract.py
 
+
 # ======================== Git ========================
 .git/
+.claude/
+._一生一芯_ v24.07 课程主页 _ 官方文档_files/
+# 环境与敏感变量
+.env
+*.key
+# 字节码与缓存
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# Jupyter / 测试缓存
+.pytest_cache/
+.ipynb_checkpoints/
+# 依赖包
+node_modules/
+
+# 构建输出
+dist/
+build/
+
+# 日志与打包分析
+*.log
+npm-debug.log*
