@@ -433,6 +433,10 @@ Color(red, green, blue)  # 内部实现: (red << 16) | (green << 8) | blue
 
 配置文件：[.vscode/sftp.json](.vscode/sftp.json)
 
+> ⚠️ **安全提醒**：本配置文件已加入 `.gitignore`，不会上传到 GitHub。但密码以明文存储在本地磁盘中，建议改用 SSH 密钥认证。
+
+#### 方案 A：密码认证（简单，不推荐）
+
 ```json
 {
     "name": "RaspberryPi-Buildroot",
@@ -440,7 +444,28 @@ Color(red, green, blue)  # 内部实现: (red << 16) | (green << 8) | blue
     "protocol": "sftp",
     "port": 22,
     "username": "root",
-    "password": "123456",
+    "password": "你的密码",
+    "remotePath": "/root/projects",
+    "uploadOnSave": true,
+    "ignore": [
+        "**/.vscode/**",
+        "**/.git/**"
+    ]
+}
+```
+
+#### 方案 B：SSH 密钥认证（推荐）
+
+先在本地生成 SSH 密钥对，将公钥添加到树莓派，然后配置文件改为：
+
+```json
+{
+    "name": "RaspberryPi-Buildroot",
+    "host": "192.168.88.1",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "root",
+    "privateKeyPath": "~/.ssh/id_rsa",
     "remotePath": "/root/projects",
     "uploadOnSave": true,
     "ignore": [
