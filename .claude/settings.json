@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm config *)",
+      "Bash(npm search *)",
+      "Bash(npm ls *)",
+      "Bash(npx -y mcp-fetch-node --help)",
+      "Bash(timeout 3 npx -y mcp-fetch-node --stdio)",
+      "Bash(npx -y url-context-mcp --help)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\(r'c:\\\\Users\\\\szj\\\\.claude\\\\settings.json'\\)\\); print\\('enabledMcpjsonServers:', d.get\\('enabledMcpjsonServers', 'NOT FOUND'\\)\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(timeout 5 npx -y url-context-mcp)",
+      "Bash(echo \"---EXIT: $?---\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('enabledMcpjsonServers:', d.get\\('enabledMcpjsonServers'\\)\\); print\\('mcpServers:', d.get\\('mcpServers'\\)\\)\")",
+      "Bash(rm ~/.claude/.mcp.json && echo \"已删除 .mcp.json\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\(r'c:\\\\Users\\\\szj\\\\.claude\\\\settings.json', encoding='utf-8'\\)\\); print\\('enabledMcpjsonServers:', d.get\\('enabledMcpjsonServers', 'NOT SET'\\)\\); print\\('mcpServers:', d.get\\('mcpServers', 'NOT SET'\\)\\)\")",
+      "Bash(pdftotext -layout \"c:/Users/szj/Desktop/rpi_code/Pithon_billingual.pdf\" -)",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe -c \"import PyPDF2; print\\('PyPDF2 OK'\\)\")",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe -c \"import pdfplumber; print\\('pdfplumber OK'\\)\")",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe -c \"import fitz; print\\('fitz OK'\\)\")",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe _extract_pdf.py)",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe _extract_pdf2.py)",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe _extract_pdf3.py)",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe _extract_pdf4.py)",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe _search_full.py)",
+      "Bash(/c/Users/szj/AppData/Local/Programs/Python/Python312/python.exe _find_listing.py)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\szj\\.claude",
+      "C:\\Users\\szj\\.claude",
+      "C:\\Users\\szj\\AppData\\Local\\Temp"
+    ]
+  }
+}
